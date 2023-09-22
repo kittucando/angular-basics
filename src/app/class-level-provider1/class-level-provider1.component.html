@@ -1,1 +1,18 @@
 <app-lifecycle-example [inputValue]="exampleValue"></app-lifecycle-example>
+
+<div *ngFor="let todo of todos">
+    <div>
+        userId:{{todo.userId}}
+      
+    </div>
+    <div>
+       
+        id:{{todo.id}}
+    </div>
+    <div>
+        title:{{todo.title}} 
+    </div>
+    <div >
+<br>
+    </div>
+</div>

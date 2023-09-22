@@ -1,17 +1,28 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
-import { LifecycleExampleComponentComponent } from '../lifecycle-example-component/lifecycle-example-component.component';
+import {HttpClient} from '@angular/common/http';
+
+
+interface JSP{
+  userId:string;
+  id:string;
+  title:string;
+  completed:boolean
+}
 @Component({
   selector: 'app-provider',
   templateUrl: './class-level-provider1.component.html',
   styleUrls: ['./class-level-provider1.component.css']
 })
-export class ClassLevelProvider1Component  
+
+
+export class ClassLevelProvider1Component  implements  OnChanges,OnInit,OnDestroy
  {
- 
+  todos: JSP[] = [];
   exampleValue = 'Hello, World!';
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
+    
     console.log('1. Provider -  Constructor Called');
   }
 
@@ -20,6 +31,10 @@ export class ClassLevelProvider1Component
   }
 
   ngOnInit() {
+    this.http.get<JSP[]>("https://jsonplaceholder.typicode.com/todos").subscribe(data=>{
+      this.todos=data;
+      console.log(data);
+    });
     console.log('3. Provider -  OnInit Called');
   }
 
