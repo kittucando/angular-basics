@@ -14,6 +14,6 @@ import { ClassLevelProvider1Component } from './class-level-provider1/class-leve
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [ ClassLevelProvider1Component]
+  bootstrap: [ AppComponent]
 })
 export class AppModule { }
