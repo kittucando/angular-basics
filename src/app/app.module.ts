@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClassLevelProvider1Component } from './class-level-provider1/class-level-provider1.component';
+import { LifecycleExampleComponentComponent } from './lifecycle-example-component/lifecycle-example-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClassLevelProvider1Component
+    ClassLevelProvider1Component,
+    LifecycleExampleComponentComponent
   ],
   imports: [
     BrowserModule,
