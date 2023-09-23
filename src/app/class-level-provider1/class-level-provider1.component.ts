@@ -18,7 +18,7 @@ interface JSP{
 export class ClassLevelProvider1Component  implements  OnChanges,OnInit,OnDestroy
  {
   todos: JSP[] = [];
-  exampleValue = 'Hello, World!';
+  exampleValue = 'Value from Parent';
 
 
   constructor(private http: HttpClient) {

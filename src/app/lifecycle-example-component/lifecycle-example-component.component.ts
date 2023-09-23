@@ -9,6 +9,8 @@ import { ClassLevelProvider1Component } from '../class-level-provider1/class-lev
 export class LifecycleExampleComponentComponent implements  OnChanges, OnInit, AfterViewInit, AfterViewChecked, OnDestroy, DoCheck, AfterContentInit, AfterContentChecked {
   @Input() inputValue: string | undefined ;
    flag:boolean=true;
+   @Input()
+  exampleValueFromClassLevel!: string;
 
   constructor() {
     console.log('1. Child - Constructor Called');
