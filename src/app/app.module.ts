@@ -6,6 +6,7 @@ import { ClassLevelProvider1Component } from './class-level-provider1/class-leve
 import { LifecycleExampleComponentComponent } from './lifecycle-example-component/lifecycle-example-component.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CheckHowthingsworkService } from './check-howthingswork.service';
 
 @NgModule({
   declarations: [ //components, directives, pipes  under this module.
@@ -19,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
    SharedModule,
    HttpClientModule
   ],
-  providers: [],
+  providers: [CheckHowthingsworkService],
   bootstrap: [ AppComponent]
 })
 export class AppModule { }
