@@ -1,5 +1,5 @@
 import { Component,Injectable,inject } from '@angular/core';
-import { CheckHowthingsworkService } from './check-howthingswork.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +9,13 @@ import { CheckHowthingsworkService } from './check-howthingswork.service';
 })
 
 export class AppComponent {
-  title = 'angula-provider-test';
-  constructor(private ch: CheckHowthingsworkService){
-  
+
+  constructor(private router: Router) {
+    const state = this.router.routerState;
+    console.log(this.router);
+    console.log(state.snapshot.url); // Access current URL
   }
-    checkLoggedIn =this.ch.loggedInStatus();
+  title = 'angula-provider-test';
+  
   
 }

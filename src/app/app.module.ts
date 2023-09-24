@@ -7,18 +7,24 @@ import { LifecycleExampleComponentComponent } from './lifecycle-example-componen
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CheckHowthingsworkService } from './check-howthingswork.service';
+import { HomeComponent } from './home/home.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
+
 
 @NgModule({
   declarations: [ //components, directives, pipes  under this module.
     AppComponent,
     ClassLevelProvider1Component,
-    LifecycleExampleComponentComponent
+    LifecycleExampleComponentComponent,
+    HomeComponent,
+    ErrorpageComponent
   ],
   imports: [ //Modules  added to this module
     BrowserModule,
     AppRoutingModule,
    SharedModule,
-   HttpClientModule
+   HttpClientModule,
+   
   ],
   providers: [CheckHowthingsworkService],
   bootstrap: [ AppComponent]
