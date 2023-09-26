@@ -5,14 +5,18 @@ import { LifecycleExampleComponentComponent } from './lifecycle-example-componen
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { FormComponent } from './form/form.component';
+import { GAuthGuard } from './g-auth.guard';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent, pathMatch: 'full' },
-  { path: 'ClassLevel', component: ClassLevelProvider1Component },
-  //{path:'404',component:ErrorpageComponent},
-  { path: 'LifecycleExample', component: LifecycleExampleComponentComponent },
-  { path: 'Forms', component: FormComponent },
-  //{ path: '**', component: ErrorpageComponent }, // This will handle any unknown routes
+  { path: "", component: HomeComponent, pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'classLevel', component: ClassLevelProvider1Component },
+  { path: 'lifecycleExample', component: LifecycleExampleComponentComponent },
+  { path: 'forms', component: FormComponent },
+  { path: 'admin', component: AdminComponent , canActivate:[GAuthGuard]},
+    //{path:'404',component:ErrorpageComponent},
+  { path: '**', component: ErrorpageComponent }, // This will handle any unknown routes
 ];
 
 @NgModule({
