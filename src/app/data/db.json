@@ -1,0 +1,22 @@
+{
+  "Customers": [
+    {
+      "customerName": "axle2",
+      "email": "axle@gmaiml.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "customerName": "axle3",
+      "email": "axle@gmaim2l.com",
+      "password": "123452352352",
+      "id": 3
+    },
+    {
+      "customerName": "axle3",
+      "email": "axle@gmaim2l.com",
+      "password": "123452352352",
+      "id": 4
+    }
+  ]
+}

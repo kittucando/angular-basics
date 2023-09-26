@@ -4,18 +4,19 @@ import { ClassLevelProvider1Component } from './class-level-provider1/class-leve
 import { LifecycleExampleComponentComponent } from './lifecycle-example-component/lifecycle-example-component.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
-  {path:'Home',component:HomeComponent,pathMatch:'full'},
-  {path:'ClassLevel',component:ClassLevelProvider1Component},
-  {path:'404',component:ErrorpageComponent}, 
-{path:'LifecycleExample',component:LifecycleExampleComponentComponent},
-{ path: '**', component: ErrorpageComponent} // This will handle any unknown routes
-
+  { path: 'Home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'ClassLevel', component: ClassLevelProvider1Component },
+  //{path:'404',component:ErrorpageComponent},
+  { path: 'LifecycleExample', component: LifecycleExampleComponentComponent },
+  { path: 'Forms', component: FormComponent },
+  //{ path: '**', component: ErrorpageComponent }, // This will handle any unknown routes
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

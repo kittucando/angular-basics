@@ -15,7 +15,5 @@ export class AppComponent {
     console.log(this.router);
     console.log(state.snapshot.url); // Access current URL
   }
-  title = 'angula-provider-test';
-  
-  
-}
+  title = 'angula-provider-test'; 
+}                                

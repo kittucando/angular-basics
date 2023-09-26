@@ -1,0 +1,13 @@
+<p>form works!</p>
+<div>
+  <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)">
+    <input type="text" [(ngModel)]="customerName" name="customerName" />
+    <input type="email" [(ngModel)]="email" name="email" />
+    <input type="password" [(ngModel)]="password" name="password" />
+    <button type="submit" [disabled]="!customerForm.form.valid">
+      Register
+    </button>
+
+    <button (click)="deleteCustomer()">Delete customer</button>
+  </form>
+</div>

@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CheckHowthingsworkService } from './check-howthingswork.service';
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule} from '@angular/forms';
+import { AdminComponent } from './admin/admin.component'
 
 
 @NgModule({
@@ -17,13 +20,16 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     ClassLevelProvider1Component,
     LifecycleExampleComponentComponent,
     HomeComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    FormComponent,
+    AdminComponent
   ],
   imports: [ //Modules  added to this module
     BrowserModule,
     AppRoutingModule,
    SharedModule,
    HttpClientModule,
+   FormsModule
    
   ],
   providers: [CheckHowthingsworkService],
