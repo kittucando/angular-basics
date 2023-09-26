@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'lifecycleExample', component: LifecycleExampleComponentComponent },
   { path: 'forms', component: FormComponent },
   { path: 'admin', component: AdminComponent , canActivate:[GAuthGuard]},
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
     //{path:'404',component:ErrorpageComponent},
   { path: '**', component: ErrorpageComponent }, // This will handle any unknown routes
 ];
